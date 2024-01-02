@@ -115,25 +115,25 @@
 
     <!-- FOOTER -->
     <div
-      class="flex flex-col bg-gradient-to-r from-[#085D3A] to-[#079455] text-white"
+      class="flex flex-col md:flex-row justify-evenly bg-gradient-to-r from-[#085D3A] to-[#079455] text-white"
     >
       <div class="m-3">
-        <h4 class="py-2">About Us</h4>
-        <div class="flex flex-row md:flex-col gap-3">
+        <h4 class="py-2 text-[12px] font-bold">About Us</h4>
+        <div class="flex flex-row md:flex-col gap-5">
           <div class="flex flex-col gap-3">
             <img
               src="./assets/logo-smartnetindo.png"
-              class="h-[50px] w-[400px]"
+              class="h-[50px] w-[400px] md:w-[300px]"
               alt="logo"
             />
             <img
               src="./assets/logo-smartnettc.png"
-              class="h-[50px] w-[400px]"
+              class="h-[50px] w-[400px] md:w-[300px]"
               alt="logo"
             />
           </div>
           <div class="flex flex-col gap-3">
-            <h5 class="text-[15px]">PT. SMARTNETINDO MULTI SOLUSI</h5>
+            <h5 class="text-[14px]">PT. SMARTNETINDO MULTI SOLUSI</h5>
             <p class="text-[12px] font-light">
               Office : Jl. Aquamarin 2.4 No. 41 Kota Baru Driyorejo Gresik 61177
               East Java - Indonesia
@@ -142,51 +142,60 @@
         </div>
       </div>
 
-      <div class="m-3">
-        <h4 class="py-2">Page</h4>
-        <div class="flex flex-row mx-4 justify-between text-[12px]">
-          <ul class="footer-page">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Vision & Mission</a></li>
-            <li><a href="#">Principles</a></li>
-            <li><a href="#">IT Certified Engineer</a></li>
-            <li><a href="#">ICT Solutions</a></li>
-          </ul>
-          <ul class="footer-page">
-            <li><a href="#">Our Service</a></li>
-            <li><a href="#">World Class partners</a></li>
-            <li><a href="#">Costumers Reference</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+      <div class="flex flex-col">
+        <div class="m-3">
+          <h4 class="py-2 text-[12px] font-bold">Page</h4>
+          <div class="flex flex-row mx-4 justify-between text-[12px] gap-5">
+            <ul class="footer-page">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Vision & Mission</a></li>
+              <li><a href="#">Principles</a></li>
+              <li><a href="#">IT Certified Engineer</a></li>
+              <li><a href="#">ICT Solutions</a></li>
+            </ul>
+            <ul class="footer-page">
+              <li><a href="#">Our Service</a></li>
+              <li><a href="#">World Class partners</a></li>
+              <li><a href="#">Costumers Reference</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:justify-between">
+          <div class="m-3">
+            <h4 class="py-2 text-[12px] font-bold">Contact us</h4>
+            <div class="flex flex-col gap-1 text-[10px]">
+              <p class="flex items-center gap-1">
+                <i class="bx bxs-envelope text-[18px]"></i>
+                <span>info@smartnetindo.com / sales@smartnetindo.com</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <ion-icon name="call" class="text-[18px]"></ion-icon>
+                <span>+62 822 3164 6719 / +62 811 3693 989</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <ion-icon name="logo-whatsapp" class="text-[18px]"></ion-icon>
+                <span>+62 822 3164 6719 / +62 811 3693 989</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="bx bxl-telegram text-[18px]"></i>
+                <span>+62 822 3164 6719 / +62 811 3693 989</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="m-3 md:hidden">
+            <h4 class="py-2 text-[12px] font-bold">Visitor</h4>
+            <img src="./assets/visitor.png" class="h-[150px]" alt="visitor" />
+          </div>
         </div>
       </div>
 
-      <div class="m-3">
-        <h4 class="py-2">Contact us</h4>
-        <div class="flex flex-col gap-1 text-[10px]">
-          <p class="flex items-center gap-1">
-            <i class="bx bxs-envelope text-[18px]"></i>
-            <span>info@smartnetindo.com / sales@smartnetindo.com</span>
-          </p>
-          <p class="flex items-center gap-1">
-            <ion-icon name="call" class="text-[18px]"></ion-icon>
-            <span>+62 822 3164 6719 / +62 811 3693 989</span>
-          </p>
-          <p class="flex items-center gap-1">
-            <ion-icon name="logo-whatsapp" class="text-[18px]"></ion-icon>
-            <span>+62 822 3164 6719 / +62 811 3693 989</span>
-          </p>
-          <p class="flex items-center gap-1">
-            <i class="bx bxl-telegram text-[18px]"></i>
-            <span>+62 822 3164 6719 / +62 811 3693 989</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="m-3">
-        <h4 class="py-2">Visitor</h4>
-        <img src="./assets/visitor.png" class="h-[150px] w-auto" alt="visitor" />
+      <div class="m-3 hidden md:block">
+        <h4 class="py-2 text-[12px] font-bold">Visitor</h4>
+        <img src="./assets/visitor.png" class="h-[150px]" alt="visitor" />
       </div>
     </div>
 
