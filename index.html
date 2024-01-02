@@ -76,10 +76,23 @@
     <div id="mobileMenu" class="bg-white shadow-sm md:hidden hidden">
       <ul class="flex flex-col p-3 gap-5">
         <li>Home</li>
-        <li>Profile <ion-icon name="arrow-dropdown"></ion-icon></li>
+        <li class="submenu-toggle" data-submenu="profile">
+          Profile <ion-icon name="arrow-dropdown"></ion-icon>
+        </li>
+        <ul class="submenu hidden" id="submenu-profile">
+          <li>Vision & Mission</li>
+          <li>Principles</li>
+          <li>IT Certified Engineer</li>
+        </ul>
         <li>ICT Solutions</li>
         <li>Our Service</li>
-        <li>Partners & Clients <ion-icon name="arrow-dropdown"></ion-icon></li>
+        <li class="submenu-toggle" data-submenu="partners-clients">
+          Partners & Clients <ion-icon name="arrow-dropdown"></ion-icon>
+        </li>
+        <ul class="submenu hidden" id="submenu-partners-clients">
+          <li>World Class Partners</li>
+          <li>Customer Reference</li>
+        </ul>
         <li>News</li>
         <li>Contact</li>
       </ul>
