@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -13,7 +15,7 @@
     <title>Smart Net Indo</title>
   </head>
   <body>
-    <div class="hidden md:block sticky top-0 px-14 bg-white shadow-sm">
+    <div class="hidden md:block px-14 bg-white shadow-sm">
       <div class="border-b border-gray-300 py-3">
         <div class="flex flex-row justify-between">
           <div class="flex flex-row gap-3">
@@ -52,7 +54,7 @@
       </div>
     </div>
 
-    <div class="md:hidden sticky top-0 bg-white shadow-sm">
+    <div class="md:hidden bg-white shadow-sm">
       <div class="flex flex-row justify-between p-5">
         <button id="menuButton" class="flex items-center">
           <img id="menuImage" src="./assets/menu.png" alt="menu" />
@@ -110,8 +112,88 @@
     <br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
-    <div class="text-[100px] bg-red-500">
-      <h1>LMAO OO</h1>
+
+    <!-- FOOTER -->
+    <div
+      class="flex flex-col bg-gradient-to-r from-[#085D3A] to-[#079455] text-white"
+    >
+      <div class="m-3">
+        <h4 class="py-2">About Us</h4>
+        <div class="flex flex-row md:flex-col gap-3">
+          <div class="flex flex-col gap-3">
+            <img
+              src="./assets/logo-smartnetindo.png"
+              class="h-[50px] w-[400px]"
+              alt="logo"
+            />
+            <img
+              src="./assets/logo-smartnettc.png"
+              class="h-[50px] w-[400px]"
+              alt="logo"
+            />
+          </div>
+          <div class="flex flex-col gap-3">
+            <h5 class="text-[15px]">PT. SMARTNETINDO MULTI SOLUSI</h5>
+            <p class="text-[12px] font-light">
+              Office : Jl. Aquamarin 2.4 No. 41 Kota Baru Driyorejo Gresik 61177
+              East Java - Indonesia
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="m-3">
+        <h4 class="py-2">Page</h4>
+        <div class="flex flex-row mx-4 justify-between text-[12px]">
+          <ul class="footer-page">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Vision & Mission</a></li>
+            <li><a href="#">Principles</a></li>
+            <li><a href="#">IT Certified Engineer</a></li>
+            <li><a href="#">ICT Solutions</a></li>
+          </ul>
+          <ul class="footer-page">
+            <li><a href="#">Our Service</a></li>
+            <li><a href="#">World Class partners</a></li>
+            <li><a href="#">Costumers Reference</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="m-3">
+        <h4 class="py-2">Contact us</h4>
+        <div class="flex flex-col gap-1 text-[10px]">
+          <p class="flex items-center gap-1">
+            <i class="bx bxs-envelope text-[18px]"></i>
+            <span>info@smartnetindo.com / sales@smartnetindo.com</span>
+          </p>
+          <p class="flex items-center gap-1">
+            <ion-icon name="call" class="text-[18px]"></ion-icon>
+            <span>+62 822 3164 6719 / +62 811 3693 989</span>
+          </p>
+          <p class="flex items-center gap-1">
+            <ion-icon name="logo-whatsapp" class="text-[18px]"></ion-icon>
+            <span>+62 822 3164 6719 / +62 811 3693 989</span>
+          </p>
+          <p class="flex items-center gap-1">
+            <i class="bx bxl-telegram text-[18px]"></i>
+            <span>+62 822 3164 6719 / +62 811 3693 989</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="m-3">
+        <h4 class="py-2">Visitor</h4>
+        <img src="./assets/visitor.png" class="h-[150px] w-auto" alt="visitor" />
+      </div>
+    </div>
+
+    <div>
+      <p class="text-center text-[8px] bg-white p-2">
+        ©2013 PT. SMARTNETINDO MULTI SOLUSI | All Rights Reserved
+      </p>
     </div>
   </body>
 
