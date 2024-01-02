@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -12,17 +13,24 @@
     <title>Smart Net Indo</title>
   </head>
   <body>
-    <div class="hidden md:block sticky top-1 mx-16">
+    <div class="hidden md:block sticky top-0 px-14 bg-white shadow-sm">
       <div class="border-b border-gray-300 py-3">
         <div class="flex flex-row justify-between">
           <div class="flex flex-row gap-3">
-            <h1>Lorem, ipsum.</h1>
+            <img
+              src="./assets/logo-smartnetindo.png"
+              class="lg:h-[50px] md:h-[40px] w-auto"
+              alt="logo"
+            />
             <div class="border-r-[1.5px] rounded border-gray-300"></div>
-            <h1>Lorem, ipsum.</h1>
+            <img
+              src="./assets/logo-smartnettc.png"
+              class="lg:h-[50px] md:h-[40px] w-auto"
+              alt="logo"
+            />
           </div>
-          <div class="flex flex-row gap-5 text-2xl">
+          <div class="flex flex-row items-center gap-5 text-2xl">
             <div><i class="bx bxl-telegram"></i></div>
-            l
             <div><i class="bx bxl-twitter"></i></div>
             <div><i class="bx bxl-facebook-square"></i></div>
             <div><ion-icon name="logo-whatsapp"></ion-icon></div>
@@ -30,9 +38,7 @@
         </div>
       </div>
       <div class="py-3">
-        <ul
-          class="flex flex-row items-center justify-center gap-5 text-red-500"
-        >
+        <ul class="flex flex-row items-center justify-center gap-5">
           <li>Home</li>
           <li>Profile <ion-icon name="arrow-dropdown"></ion-icon></li>
           <li>ICT Solutions</li>
@@ -46,16 +52,42 @@
       </div>
     </div>
 
-    <div class="md:hidden sticky top-1">
-      <div class="flex flex-row justify-between py-3 px-5">
-        <div class="flex items-center">
-          <i class="bx bx-menu text-[30px]"></i>
-        </div>
+    <div class="md:hidden sticky top-0 bg-white shadow-sm">
+      <div class="flex flex-row justify-between p-5">
+        <button id="menuButton" class="flex items-center">
+          <img id="menuImage" src="./assets/menu.png" alt="menu" />
+        </button>
         <div class="flex flex-row gap-3">
-          <h1>Lorem, ipsum.</h1>
+          <img
+            src="./assets/logo-smartnetindo.png"
+            class="h-auto w-[100px]"
+            alt="logo"
+          />
           <div class="border-r-[1.5px] rounded border-gray-300"></div>
-          <h1>Lorem, ipsum.</h1>
+          <img
+            src="./assets/logo-smartnettc.png"
+            class="h-auto w-[100px]"
+            alt="logo"
+          />
         </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="bg-white shadow-sm md:hidden hidden">
+      <ul class="flex flex-col p-3 gap-5">
+        <li>Home</li>
+        <li>Profile <ion-icon name="arrow-dropdown"></ion-icon></li>
+        <li>ICT Solutions</li>
+        <li>Our Service</li>
+        <li>Partners & Clients <ion-icon name="arrow-dropdown"></ion-icon></li>
+        <li>News</li>
+        <li>Contact</li>
+      </ul>
+      <div class="flex flex-row items-center justify-evenly gap-5 text-2xl p-3">
+        <div><i class="bx bxl-telegram"></i></div>
+        <div><i class="bx bxl-twitter"></i></div>
+        <div><i class="bx bxl-facebook-square"></i></div>
+        <div><ion-icon name="logo-whatsapp"></ion-icon></div>
       </div>
     </div>
 
@@ -69,4 +101,6 @@
       <h1>LMAO OO</h1>
     </div>
   </body>
+
+  <script src="./script.js"></script>
 </html>
