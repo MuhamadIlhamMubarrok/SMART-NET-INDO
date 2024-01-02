@@ -39,15 +39,33 @@
           </div>
         </div>
       </div>
-      <div class="py-3">
+      <div class="py-3 lg:text-[15px] md:text-[13px]">
         <ul class="flex flex-row items-center justify-center gap-5">
           <li>Home</li>
-          <li>Profile <ion-icon name="arrow-dropdown"></ion-icon></li>
+          <div class="relative">
+            <li class="submenu-toggle" data-submenu="profile1">
+              Profile <ion-icon name="arrow-dropdown"></ion-icon>
+            </li>
+            <ul
+              class="submenu hidden absolute bg-[#223CD3] rounded-lg p-3 w-[150px] text-white text-[12px]"
+              id="submenu-profile1"
+            >
+              <li>Vision & Mission</li>
+              <li>Principles</li>
+              <li>IT Certified Engineer</li>
+            </ul>
+          </div>
           <li>ICT Solutions</li>
           <li>Our Service</li>
-          <li>
-            Parteners & Clients <ion-icon name="arrow-dropdown"></ion-icon>
-          </li>
+          <div class="relative">
+            <li class="submenu-toggle" data-submenu="partners-clients2">
+              Parteners & Clients <ion-icon name="arrow-dropdown"></ion-icon>
+            </li>
+            <ul class="submenu hidden absolute bg-[#223CD3] rounded-lg p-3 w-[150px] text-white text-[12px]" id="submenu-partners-clients2">
+              <li>World Class Partners</li>
+              <li>Customer Reference</li>
+            </ul>
+          </div>
           <li>news</li>
           <li>Contact</li>
         </ul>
@@ -78,20 +96,20 @@
     <div id="mobileMenu" class="bg-white shadow-sm md:hidden hidden">
       <ul class="flex flex-col p-3 gap-5">
         <li>Home</li>
-        <li class="submenu-toggle" data-submenu="profile">
+        <li class="submenu-toggle" data-submenu="profile2">
           Profile <ion-icon name="arrow-dropdown"></ion-icon>
         </li>
-        <ul class="submenu hidden" id="submenu-profile">
+        <ul class="submenu hidden" id="submenu-profile2">
           <li>Vision & Mission</li>
           <li>Principles</li>
           <li>IT Certified Engineer</li>
         </ul>
         <li>ICT Solutions</li>
         <li>Our Service</li>
-        <li class="submenu-toggle" data-submenu="partners-clients">
+        <li class="submenu-toggle" data-submenu="partners-clients2">
           Partners & Clients <ion-icon name="arrow-dropdown"></ion-icon>
         </li>
-        <ul class="submenu hidden" id="submenu-partners-clients">
+        <ul class="submenu hidden" id="submenu-partners-clients2">
           <li>World Class Partners</li>
           <li>Customer Reference</li>
         </ul>
@@ -115,7 +133,7 @@
 
     <!-- FOOTER -->
     <div
-      class="flex flex-col md:flex-row justify-evenly bg-gradient-to-r from-[#085d3acc] to-[#079455cc] text-white"
+      class="flex flex-col md:flex-row justify-evenly bg-gradient-to-r from-[#085d3ad9] to-[#079455d9] text-white"
     >
       <div class="m-3">
         <h4 class="py-2 text-[12px] font-bold">About Us</h4>
@@ -133,8 +151,10 @@
             />
           </div>
           <div class="flex flex-col gap-3">
-            <h5 class="text-[14px]">PT. SMARTNETINDO MULTI SOLUSI</h5>
-            <p class="text-[12px] font-light">
+            <h5 class="text-[14px] lg:text-[16px]">
+              PT. SMARTNETINDO MULTI SOLUSI
+            </h5>
+            <p class="text-[12px] lg:text-[14px] font-light">
               Office : Jl. Aquamarin 2.4 No. 41 Kota Baru Driyorejo Gresik 61177
               East Java - Indonesia
             </p>
@@ -145,7 +165,9 @@
       <div class="flex flex-col">
         <div class="m-3">
           <h4 class="py-2 text-[12px] font-bold">Page</h4>
-          <div class="flex flex-row mx-4 justify-between text-[12px] gap-5">
+          <div
+            class="flex flex-row mx-4 justify-between text-[12px] lg:text-[14px] gap-10"
+          >
             <ul class="footer-page">
               <li><a href="#">Home</a></li>
               <li><a href="#">Vision & Mission</a></li>
@@ -166,21 +188,21 @@
         <div class="flex flex-col sm:flex-row sm:justify-between">
           <div class="m-3">
             <h4 class="py-2 text-[12px] font-bold">Contact us</h4>
-            <div class="flex flex-col gap-1 text-[10px]">
+            <div class="flex flex-col gap-1 text-[10px] md:text-[12px]">
               <p class="flex items-center gap-1">
-                <i class="bx bxs-envelope text-[18px]"></i>
+                <i class="bx bxs-envelope text-[20px]"></i>
                 <span>info@smartnetindo.com / sales@smartnetindo.com</span>
               </p>
               <p class="flex items-center gap-1">
-                <ion-icon name="call" class="text-[18px]"></ion-icon>
+                <ion-icon name="call" class="text-[20px]"></ion-icon>
                 <span>+62 822 3164 6719 / +62 811 3693 989</span>
               </p>
               <p class="flex items-center gap-1">
-                <ion-icon name="logo-whatsapp" class="text-[18px]"></ion-icon>
+                <ion-icon name="logo-whatsapp" class="text-[20px]"></ion-icon>
                 <span>+62 822 3164 6719 / +62 811 3693 989</span>
               </p>
               <p class="flex items-center gap-1">
-                <i class="bx bxl-telegram text-[18px]"></i>
+                <i class="bx bxl-telegram text-[20px]"></i>
                 <span>+62 822 3164 6719 / +62 811 3693 989</span>
               </p>
             </div>
@@ -199,7 +221,9 @@
       </div>
     </div>
     <div>
-      <p class="text-center text-[8px] sm:text-[10px] md:text-[12px] bg-white p-2">
+      <p
+        class="text-center text-[8px] sm:text-[10px] md:text-[12px] bg-white p-2"
+      >
         ©2013 PT. SMARTNETINDO MULTI SOLUSI | All Rights Reserved
       </p>
     </div>
