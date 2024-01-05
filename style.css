@@ -11,24 +11,21 @@ body {
 }
 
 .owl-next {
-  background-image: url("./assets/slide/next.png") !important;
-  background-repeat: no-repeat !important;
-  width: 80px;
-  height: 80px;
-}
-
-.owl-prev {
-  background-image: url("./assets/slide/prev.png") !important;
   background-repeat: no-repeat !important;
   width: 65px;
   height: 65px;
-  color: white !important;
+}
+
+.owl-prev {
+  background-repeat: no-repeat !important;
+  width: 65px;
+  height: 65px;
 }
 
 .owl-nav {
+  padding:50px
   width: 200px;
   position: absolute;
   top: 0;
   right: 10px;
-  color: white !important;
 }
