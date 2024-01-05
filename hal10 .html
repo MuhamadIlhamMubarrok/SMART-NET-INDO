@@ -1,344 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <title>Smart Net Indo</title>
     <style></style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- navbar -->
     <div class="hidden md:block px-14 bg-white shadow-sm">
-        <div class="border-b border-gray-300 py-3">
-            <div class="flex flex-row justify-between">
-                <div class="flex flex-row gap-3">
-                    <img src="./assets/logo-smartnetindo.png" class="lg:h-[50px] md:h-[40px] w-auto" alt="logo" />
-                    <div class="border-r-[1.5px] rounded border-gray-300"></div>
-                    <img src="./assets/logo-smartnettc.png" class="lg:h-[50px] md:h-[40px] w-auto" alt="logo" />
-                </div>
-                <div class="flex flex-row items-center gap-5 text-2xl">
-                    <div><i class="bx bxl-telegram"></i></div>
-                    <div><i class="bx bxl-twitter"></i></div>
-                    <div><i class="bx bxl-facebook-square"></i></div>
-                    <div><ion-icon name="logo-whatsapp"></ion-icon></div>
-                </div>
-            </div>
-        </div>
-        <div class="py-3 lg:text-[15px] md:text-[13px]">
-            <ul class="flex flex-row items-center justify-center gap-5">
-                <li>Home</li>
-                <div class="relative">
-                    <li class="submenu-toggle" data-submenu="profile1">Profile <ion-icon
-                            name="arrow-dropdown"></ion-icon></li>
-                    <ul class="submenu hidden absolute bg-[#223CD3] rounded-lg p-3 w-[150px] text-white text-[12px]"
-                        id="submenu-profile1">
-                        <li>Vision & Mission</li>
-                        <li>Principles</li>
-                        <li>IT Certified Engineer</li>
-                    </ul>
-                </div>
-                <li>ICT Solutions</li>
-                <li>Our Service</li>
-                <div class="relative">
-                    <li class="submenu-toggle" data-submenu="partners-clients1">Parteners & Clients <ion-icon
-                            name="arrow-dropdown"></ion-icon></li>
-                    <ul class="submenu hidden absolute bg-[#223CD3] rounded-lg p-3 w-[150px] text-white text-[12px]"
-                        id="submenu-partners-clients1">
-                        <li>World Class Partners</li>
-                        <li>Customer Reference</li>
-                    </ul>
-                </div>
-                <li>news</li>
-                <li>Contact</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="md:hidden bg-white shadow-sm">
-        <div class="flex flex-row justify-between p-5">
-            <button id="menuButton" class="flex items-center">
-                <img id="menuImage" src="./assets/menu.png" alt="menu" />
-            </button>
-            <div class="flex flex-row gap-3">
-                <img src="./assets/logo-smartnetindo.png" class="h-auto w-[100px]" alt="logo" />
-                <div class="border-r-[1.5px] rounded border-gray-300"></div>
-                <img src="./assets/logo-smartnettc.png" class="h-auto w-[100px]" alt="logo" />
-            </div>
-        </div>
-    </div>
-
-    <div id="mobileMenu" class="bg-white shadow-sm md:hidden hidden">
-        <ul class="flex flex-col p-3 gap-5">
-            <li>Home</li>
-            <li class="submenu-toggle" data-submenu="profile2">Profile <ion-icon name="arrow-dropdown"></ion-icon></li>
-            <ul class="submenu hidden" id="submenu-profile2">
-                <li>Vision & Mission</li>
-                <li>Principles</li>
-                <li>IT Certified Engineer</li>
-            </ul>
-            <li>ICT Solutions</li>
-            <li>Our Service</li>
-            <li class="submenu-toggle" data-submenu="partners-clients2">Partners & Clients <ion-icon
-                    name="arrow-dropdown"></ion-icon></li>
-            <ul class="submenu hidden" id="submenu-partners-clients2">
-                <li>World Class Partners</li>
-                <li>Customer Reference</li>
-            </ul>
-            <li>News</li>
-            <li>Contact</li>
-        </ul>
-        <div class="flex flex-row items-center justify-evenly gap-5 text-2xl p-3">
+      <div class="border-b border-gray-300 py-3">
+        <div class="flex flex-row justify-between">
+          <div class="flex flex-row gap-3">
+            <img src="./assets/logo-smartnetindo.png" class="lg:h-[50px] md:h-[40px] w-auto" alt="logo" />
+            <div class="border-r-[1.5px] rounded border-gray-300"></div>
+            <img src="./assets/logo-smartnettc.png" class="lg:h-[50px] md:h-[40px] w-auto" alt="logo" />
+          </div>
+          <div class="flex flex-row items-center gap-5 text-2xl">
             <div><i class="bx bxl-telegram"></i></div>
             <div><i class="bx bxl-twitter"></i></div>
             <div><i class="bx bxl-facebook-square"></i></div>
             <div><ion-icon name="logo-whatsapp"></ion-icon></div>
+          </div>
         </div>
+      </div>
+      <div class="py-3 lg:text-[15px] md:text-[13px]">
+        <ul class="flex flex-row items-center justify-center gap-5">
+          <li>Home</li>
+          <div class="relative">
+            <li class="submenu-toggle" data-submenu="profile1">Profile <ion-icon name="arrow-dropdown"></ion-icon></li>
+            <ul class="submenu hidden absolute bg-[#223CD3] rounded-lg p-3 w-[150px] text-white text-[12px]" id="submenu-profile1">
+              <li>Vision & Mission</li>
+              <li>Principles</li>
+              <li>IT Certified Engineer</li>
+            </ul>
+          </div>
+          <li>ICT Solutions</li>
+          <li>Our Service</li>
+          <div class="relative">
+            <li class="submenu-toggle" data-submenu="partners-clients1">Parteners & Clients <ion-icon name="arrow-dropdown"></ion-icon></li>
+            <ul class="submenu hidden absolute bg-[#223CD3] rounded-lg p-3 w-[150px] text-white text-[12px]" id="submenu-partners-clients1">
+              <li>World Class Partners</li>
+              <li>Customer Reference</li>
+            </ul>
+          </div>
+          <li>news</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="md:hidden bg-white shadow-sm">
+      <div class="flex flex-row justify-between p-5">
+        <button id="menuButton" class="flex items-center">
+          <img id="menuImage" src="./assets/menu.png" alt="menu" />
+        </button>
+        <div class="flex flex-row gap-3">
+          <img src="./assets/logo-smartnetindo.png" class="h-auto w-[100px]" alt="logo" />
+          <div class="border-r-[1.5px] rounded border-gray-300"></div>
+          <img src="./assets/logo-smartnettc.png" class="h-auto w-[100px]" alt="logo" />
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="bg-white shadow-sm md:hidden hidden">
+      <ul class="flex flex-col p-3 gap-5">
+        <li>Home</li>
+        <li class="submenu-toggle" data-submenu="profile2">Profile <ion-icon name="arrow-dropdown"></ion-icon></li>
+        <ul class="submenu hidden" id="submenu-profile2">
+          <li>Vision & Mission</li>
+          <li>Principles</li>
+          <li>IT Certified Engineer</li>
+        </ul>
+        <li>ICT Solutions</li>
+        <li>Our Service</li>
+        <li class="submenu-toggle" data-submenu="partners-clients2">Partners & Clients <ion-icon name="arrow-dropdown"></ion-icon></li>
+        <ul class="submenu hidden" id="submenu-partners-clients2">
+          <li>World Class Partners</li>
+          <li>Customer Reference</li>
+        </ul>
+        <li>News</li>
+        <li>Contact</li>
+      </ul>
+      <div class="flex flex-row items-center justify-evenly gap-5 text-2xl p-3">
+        <div><i class="bx bxl-telegram"></i></div>
+        <div><i class="bx bxl-twitter"></i></div>
+        <div><i class="bx bxl-facebook-square"></i></div>
+        <div><ion-icon name="logo-whatsapp"></ion-icon></div>
+      </div>
     </div>
     <!-- end navbar -->
 
     <!-- hero section -->
     <div>
-        <img src="./assets/hero-hal-10.png" class="w-full" alt="" />
+      <img src="./assets/hero-hal-10.png" class="w-full" alt="" />
     </div>
     <!-- end hero section -->
 
     <!-- content -->
     <div class="px-[10px] sm:px-[20px] md:px-[50px] lg:px-[100px] my-3 font-Montserrat">
-        <h1 class="mb-5 md:text-[30px] lg:text-[40px] text-[20px] font-Montserrat text-center font-semibold">EKAHAU Site
-            Survey and Professional Wireless Planner“A Greet Wi-Fi Starts With A Great Design”</h1>
-        <!-- content 1 -->
-        <div class="mx-[20px] md:mx-[40px] md:my-[40px] my-[20px]">
-            <p class="text-start text-[12px] md:text-[17px]">
-                <span class="md:text-[20px] text-[16px] text-[#406FF1] md:block font-semibold">PT. SMARTNETINDO MULTI
-                    SOLUSI l - </span>Ekahau’s award-winning tools give customers the solution they need to design,
-                validate, and maintain their
-                wireless networks. Our products make it quick and easy to design Wi-Fi with the right number of access
-                points (APs) in the right locations, and be able to quickly troubleshoot networks to limit work-stopping
-                downtime.
-            </p>
-        </div>
-        <!-- content 2 -->
-        <div class="flex justify-evenly md: items-center gap-x-[20px] md:gap-x-0 mx-[20px]">
-            <div>
-                <img src="./assets/hal10/ekahau-sell.jpg.png" class="" alt="" />
-            </div>
-            <div>
-                <ul class="text-[8px] sm:text-[12px] md:text-[14px] lg:text-[20px] flex flex-col md:gap-y-4">
-                    <li class="flex items-center">
-                        <i class="bx bx-right-arrow-alt text-[20px] md:text-[30px] lg:text-[40px] text-[#406FF1]"></i>
-                        <p>A Great Network Starts with a Great Design.</p>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bx bx-right-arrow-alt text-[20px] md:text-[30px] lg:text-[40px] text-[#406FF1]"></i>
-                        <p>Validate Your Design with Super Accurate Sidekick 2 Measurements.</p>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="bx bx-right-arrow-alt text-[20px] md:text-[30px] lg:text-[40px] text-[#406FF1]"></i>
-                        <p>Validate Your Design with Super Accurate Sidekick 2 Measurements.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- content 3 -->
+      <h1 class="mb-5 md:text-[30px] lg:text-[40px] text-[20px] font-Montserrat text-center font-semibold">EKAHAU Site Survey and Professional Wireless Planner“A Greet Wi-Fi Starts With A Great Design”</h1>
+      <!-- content 1 -->
+      <div class="mx-[20px] md:mx-[40px] md:my-[40px] my-[20px]">
+        <p class="text-start text-[12px] md:text-[17px]">
+          <span class="md:text-[20px] text-[16px] text-[#406FF1] md:block font-semibold">PT. SMARTNETINDO MULTI SOLUSI l - </span>Ekahau’s award-winning tools give customers the solution they need to design, validate, and maintain their
+          wireless networks. Our products make it quick and easy to design Wi-Fi with the right number of access points (APs) in the right locations, and be able to quickly troubleshoot networks to limit work-stopping downtime.
+        </p>
+      </div>
+      <!-- content 2 -->
+      <div class="flex justify-evenly md: items-center gap-x-[20px] md:gap-x-0 mx-[20px]">
         <div>
-            <img src="./assets/hal10/ekahau-connect.png.png" class="w-atuo w-full" alt="" />
-        </div>
-        <!-- content 4 -->
-        <div class="flex flex-col justify-start items-center">
-            <div class="flex flex-row text-[8px] sm:text-[20px] md:text-[25px] lg:text-[30px] gap-5">
-                <img src="./assets/hal10/ekahau-site.jpg.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]"
-                    alt="" />
-                <div>
-                    <h1
-                        class="text-[10px] sm:text-[25px] md:text-[30px] lg:text-[35px] text-[#406FF1] font font-semibold">
-                        Ekahau Sidekick 2®</h1>
-                    <p>The fastest, most precise Wi‑Fi testing and measurement device now supercharged and tuned for 6
-                        GHz (Wi-Fi 6E), 5 GHz and 2.4 GHz</p>
-                </div>
-            </div>
-            <div class="flex flex-row gap-x-3 text-[8px] sm:text-[20px] md:text-[25px] lg:text-[30px]">
-                <img src="./assets/hal10/ekahau-site.jpg-1.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]"
-                    alt="" />
-                <div>
-                    <h1
-                        class="text-[10px] sm:text-[25px] md:text-[30px] lg:text-[35px] text-[#406FF1] font font-semibold">
-                        Ekahau AI Pro™</h1>
-                    <p>Powerful Wi-Fi planning and AI design software for the most reliable, best performing wireless
-                        networks – including 6 GHz.</p>
-                </div>
-            </div>
-            <div class="flex flex-row gap-x-3 text-[8px] sm:text-[20px] md:text-[25px] lg:text-[30px]">
-                <img src="./assets/hal10/ekahau-site.jpg-2.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]"
-                    alt="" />
-                <div>
-
-                    <h1
-                        class="text-[10px] sm:text-[25px] md:text-[30px] lg:text-[35px] text-[#406FF1] mt-3 sm:mt-4 lg:mt-7 font font-semibold">
-                        Ekahau Survey™</h1>
-                    <p>Professional Wi-Fi site survey app for Android and iOS optimized for use with Ekahau Sidekick 2
-                    </p>
-                </div>
-            </div>
-            <div class="flex flex-row gap-x-3 text-[8px] sm:text-[20px] md:text-[25px] lg:text-[30px]">
-                <img src="./assets/hal10/ekahau-site.jpg-3.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]"
-                    alt="" />
-                <div>
-
-                    <h1
-                        class="text-[10px] sm:text-[25px] md:text-[30px] lg:text-[35px] text-[#406FF1] mt-3 sm:mt-4 lg:mt-7 font font-semibold">
-                        Ekahau Capture™</h1>
-                    <p>Easy-to-use packet capture tool for advanced troubleshooting and indepth analysis</p>
-                </div>
-            </div>
-            <div class="flex flex-row gap-x-3 text-[8px] sm:text-[20px] md:text-[25px] lg:text-[30px]">
-                <img src="./assets/hal10/ekahau-site.jpg-4.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]"
-                    alt="" />
-                <div>
-
-                    <h1
-                        class="text-[10px] sm:text-[25px] md:text-[30px] lg:text-[35px] text-[#406FF1] mt-3 sm:mt-4 lg:mt-7 font font-semibold">
-                        Ekahau Cloud™</h1>
-                    <p>Collaborate across teams and work on the same project to leverage onsite staff and remote Wi-Fi
-                        experts</p>
-                </div>
-            </div>
-            <div class="flex flex-row gap-x-3 text-[8px] sm:text-[20px] md:text-[25px] lg:text-[30px]">
-                <img src="./assets/hal10/ekahau-site.jpg-5.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]"
-                    alt="" />
-                <div>
-                    <h1
-                        class="text-[10px] sm:text-[25px] md:text-[30px] lg:text-[35px] text-[#406FF1] font font-semibold">
-                        Ekahau Cloud™</h1>
-                    <p>Collaborate across teams and work on the same project to leverage onsite staff and remote Wi-Fi
-                        experts</p>
-                </div>
-            </div>
-            <div class="flex flex-row gap-x-3 text-[8px] sm:text-[20px] md:text-[25px] lg:text-[30px]">
-                <img src="./assets/hal10/ekahau-site.jpg-6.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]"
-                    alt="" />
-                <div>
-
-                    <h1
-                        class="text-[10px] sm:text-[25px] md:text-[30px] lg:text-[35px] text-[#406FF1] font font-semibold">
-                        Ekahau Sidekick 2®</h1>
-                    <p>The fastest, most precise Wi‑Fi testing and measurement device now supercharged and tuned for 6
-                        GHz (Wi-Fi 6E), 5 GHz and 2.4 GHz</p>
-                </div>
-            </div>
-            <!-- content 5 -->
-            <div>
-                <img src="./assets/hal10/Rectangle 150981.png" class="w-full" alt="" />
-            </div>
-            <!-- content 6 - video -->
-            <div class="flex flex-col gap-y-4 gap-x-4 my-4 sm:flex-row px-[150px] justify-center items-center">
-                <video src="./assets/hal10/WhatsApp Video 2023-12-29 at 19.04.29_1361ccc6.mp4" class=""
-                    autoplay></video>
-                <video src="./assets/hal10/WhatsApp Video 2023-12-29 at 19.06.25_3cac8fac.mp4" class=""
-                    autoplay></video>
-            </div>
-            <!-- content 7 -->
-            <div>
-                <img src="./assets/hal10/ENCS Networks - WSaaS Portoflio-5 2.png" class="w-full" alt="" />
-            </div>
-        </div>
-        <!-- end content -->
-
-        <!-- FOOTER -->
-        <div
-            class="flex flex-col md:flex-row justify-evenly bg-gradient-to-r from-[#085d3ad9] to-[#079455d9] text-white">
-            <div class="m-3">
-                <h4 class="py-2 text-[12px] font-bold">About Us</h4>
-                <div class="flex flex-row md:flex-col gap-5">
-                    <div class="flex flex-col gap-3">
-                        <img src="./assets/logo-smartnetindo.png" class="h-[50px] w-[400px] md:w-[300px]"
-                            alt="logo" />
-                        <img src="./assets/logo-smartnettc.png" class="h-[50px] w-[400px] md:w-[300px]"
-                            alt="logo" />
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <h5 class="text-[14px]">PT. SMARTNETINDO MULTI SOLUSI</h5>
-                        <p class="text-[12px] lg:text-[14px] font-light">Office : Jl. Aquamarin 2.4 No. 41 Kota Baru
-                            Driyorejo Gresik 61177 East Java - Indonesia</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col">
-                <div class="m-3">
-                    <h4 class="py-2 text-[12px] font-bold">Page</h4>
-                    <div class="flex flex-row mx-4 justify-between text-[12px] lg:text-[14px] gap-10">
-                        <ul class="footer-page">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Vision & Mission</a></li>
-                            <li><a href="#">Principles</a></li>
-                            <li><a href="#">IT Certified Engineer</a></li>
-                            <li><a href="#">ICT Solutions</a></li>
-                        </ul>
-                        <ul class="footer-page">
-                            <li><a href="#">Our Service</a></li>
-                            <li><a href="#">World Class partners</a></li>
-                            <li><a href="#">Costumers Reference</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="flex flex-col sm:flex-row sm:justify-between">
-                    <div class="m-3">
-                        <h4 class="py-2 text-[12px] font-bold">Contact us</h4>
-                        <div class="flex flex-col gap-1 text-[10px] md:text-[12px]">
-                            <p class="flex items-center gap-1">
-                                <i class="bx bxs-envelope text-[20px]"></i>
-                                <span>info@smartnetindo.com / sales@smartnetindo.com</span>
-                            </p>
-                            <p class="flex items-center gap-1">
-                                <ion-icon name="call" class="text-[20px]"></ion-icon>
-                                <span>+62 822 3164 6719 / +62 811 3693 989</span>
-                            </p>
-                            <p class="flex items-center gap-1">
-                                <ion-icon name="logo-whatsapp" class="text-[20px]"></ion-icon>
-                                <span>+62 822 3164 6719 / +62 811 3693 989</span>
-                            </p>
-                            <p class="flex items-center gap-1">
-                                <i class="bx bxl-telegram text-[20px]"></i>
-                                <span>+62 822 3164 6719 / +62 811 3693 989</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="m-3 md:hidden">
-                        <h4 class="py-2 text-[12px] font-bold">Visitor</h4>
-                        <img src="./assets/visitor.png" class="h-[150px]" alt="visitor" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="m-3 hidden md:block">
-                <h4 class="py-2 text-[12px] font-bold">Visitor</h4>
-                <img src="./assets/visitor.png" class="h-[150px]" alt="visitor" />
-            </div>
+          <img src="./assets/hal10/ekahau-sell.jpg.png" class="" alt="" />
         </div>
         <div>
-            <p class="text-center text-[8px] sm:text-[10px] md:text-[12px] bg-white p-2">©2013 PT. SMARTNETINDO MULTI
-                SOLUSI | All Rights Reserved</p>
+          <ul class="text-[8px] sm:text-[12px] md:text-[14px] lg:text-[20px] flex flex-col md:gap-y-4">
+            <li class="flex items-center">
+              <i class="bx bx-right-arrow-alt text-[20px] md:text-[30px] lg:text-[40px] text-[#406FF1]"></i>
+              <p>A Great Network Starts with a Great Design.</p>
+            </li>
+            <li class="flex items-center">
+              <i class="bx bx-right-arrow-alt text-[20px] md:text-[30px] lg:text-[40px] text-[#406FF1]"></i>
+              <p>Validate Your Design with Super Accurate Sidekick 2 Measurements.</p>
+            </li>
+            <li class="flex items-center">
+              <i class="bx bx-right-arrow-alt text-[20px] md:text-[30px] lg:text-[40px] text-[#406FF1]"></i>
+              <p>Validate Your Design with Super Accurate Sidekick 2 Measurements.</p>
+            </li>
+          </ul>
         </div>
-        <!-- end FOOTER -->
-</body>
+      </div>
+      <!-- content 3 -->
+      <div>
+        <img src="./assets/hal10/ekahau-connect.png.png" class="w-atuo w-full" alt="" />
+      </div>
+      <!-- content 4 -->
+      <div class="flex flex-col justify-start items-center">
+        <div class="flex flex-row text-[8px] sm:text-[20px] md:text-[23px] gap-5">
+          <img src="./assets/hal10/ekahau-site.jpg.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]" alt="" />
+          <div>
+            <h1 class="text-[10px] sm:text-[25px] md:text-[28px] text-[#406FF1] font font-semibold">Ekahau Sidekick 2®</h1>
+            <p>The fastest, most precise Wi‑Fi testing and measurement device now supercharged and tuned for 6 GHz (Wi-Fi 6E), 5 GHz and 2.4 GHz</p>
+          </div>
+        </div>
+        <div class="flex flex-row text-[8px] sm:text-[20px] md:text-[23px] gap-5">
+          <img src="./assets/hal10/ekahau-site.jpg-1.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]" alt="" />
+          <div>
+            <h1 class="text-[10px] sm:text-[25px] md:text-[28px] text-[#406FF1] font font-semibold">Ekahau AI Pro™</h1>
+            <p>Powerful Wi-Fi planning and AI design software for the most reliable, best performing wireless networks – including 6 GHz.</p>
+          </div>
+        </div>
+        <div class="flex flex-row text-[8px] sm:text-[20px] md:text-[23px] gap-5">
+          <img src="./assets/hal10/ekahau-site.jpg-2.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]" alt="" />
+          <div>
+            <h1 class="text-[10px] sm:text-[25px] md:text-[30px] lg:text-[30px] text-[#406FF1] mt-3 sm:mt-4 lg:mt-7 font font-semibold">Ekahau Survey™</h1>
+            <p>Professional Wi-Fi site survey app for Android and iOS optimized for use with Ekahau Sidekick 2</p>
+          </div>
+        </div>
+        <div class="flex flex-row text-[8px] sm:text-[20px] md:text-[23px] gap-5">
+          <img src="./assets/hal10/ekahau-site.jpg-3.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]" alt="" />
+          <div>
+            <h1 class="text-[10px] sm:text-[25px] md:text-[28px] text-[#406FF1] mt-3 sm:mt-4 lg:mt-7 font font-semibold">Ekahau Capture™</h1>
+            <p>Easy-to-use packet capture tool for advanced troubleshooting and indepth analysis</p>
+          </div>
+        </div>
+        <div class="flex flex-row text-[8px] sm:text-[20px] md:text-[23px] gap-5">
+          <img src="./assets/hal10/ekahau-site.jpg-4.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]" alt="" />
+          <div>
+            <h1 class="text-[10px] sm:text-[25px] md:text-[28px] text-[#406FF1] mt-3 sm:mt-4 lg:mt-7 font font-semibold">Ekahau Cloud™</h1>
+            <p>Collaborate across teams and work on the same project to leverage onsite staff and remote Wi-Fi experts</p>
+          </div>
+        </div>
+        <div class="flex flex-row text-[8px] sm:text-[20px] md:text-[23px] gap-5">
+          <img src="./assets/hal10/ekahau-site.jpg-5.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]" alt="" />
+          <div>
+            <h1 class="text-[10px] sm:text-[25px] md:text-[28px] text-[#406FF1] font font-semibold">Ekahau Cloud™</h1>
+            <p>Collaborate across teams and work on the same project to leverage onsite staff and remote Wi-Fi experts</p>
+          </div>
+        </div>
+        <div class="flex flex-row text-[8px] sm:text-[20px] md:text-[23px] gap-5">
+          <img src="./assets/hal10/ekahau-site.jpg-6.png" class="w-auto h-[150px] sm:h-[250px] md:h-[270px] lg:h-[400px] mb-[10px]" alt="" />
+          <div>
+            <h1 class="text-[10px] sm:text-[25px] md:text-[28px] text-[#406FF1] font font-semibold">Ekahau Sidekick 2®</h1>
+            <p>The fastest, most precise Wi‑Fi testing and measurement device now supercharged and tuned for 6 GHz (Wi-Fi 6E), 5 GHz and 2.4 GHz</p>
+          </div>
+        </div>
+        <!-- content 5 -->
+        <div>
+          <img src="./assets/hal10/Rectangle 150981.png" class="w-full" alt="" />
+        </div>
+        <!-- content 6 - video -->
+        <div class="flex flex-col gap-y-4 gap-x-4 my-4 sm:flex-row px-[150px] justify-center items-center">
+          <video src="./assets/hal10/WhatsApp Video 2023-12-29 at 19.04.29_1361ccc6.mp4" class="" autoplay></video>
+          <video src="./assets/hal10/WhatsApp Video 2023-12-29 at 19.06.25_3cac8fac.mp4" class="" autoplay></video>
+        </div>
+        <!-- content 7 -->
+        <div>
+          <img src="./assets/hal10/ENCS Networks - WSaaS Portoflio-5 2.png" class="w-full" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="owl-carousel owl-theme sm:py-[100px]">
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar1.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center line-clamp-3">SMART FLUKE NETWORKS DSX 8000..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar2.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">EKAHAU Site Survey and Professional Wireless P..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar3.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">HELLO WELCOME “SMART EXPERT TEAMS..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar4.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART FOOD AND BEVERAGES RESERVA..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar5.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART PAYROLL SYSTEM APPLICATION..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar6.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART DOCTOR AND NURSE CALL SYSTEM..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar7.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART DIGITAL GUEST BOOKS APPLICATION..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar8.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART AERCHIVES DOCUMENT MANAGE..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar9.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART INTELLIGENT SIM SOLUTION</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar10.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART HEALTH SYSTEM APPLICATION - ONE S..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar11.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART ICT SECURITY TOTAL SOLUTION</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar12.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART INTELLIGENT MONITORING SYSTEM..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar13.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART DATA CENTER SOLUTION</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar14.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART STRUCTURED CABLING SYSTEM FOR..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar15.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">SMART INTERPRO ~ MAKE ANY PROJECTE..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar16.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">TRAINING FOR PREPARATION AND IM..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar171.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">PROFESSIONAL SERVICE VULNERABILI..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="item flex flex-col shadow-xl bg-white reounded-lg mx-[10px] my-[10px] justify-center items-center">
+          <img src="./assets/slide/gambar17.png" alt="hero1" />
+          <h1 class="font-bold my-[10px] text-center">PT. SMARTNETINDO ~ WE ARE COMPANY SYS..</h1>
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- end content -->
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./script.js"></script>
+    <!-- FOOTER -->
+    <div class="flex flex-col md:flex-row justify-evenly bg-gradient-to-r from-[#085d3ad9] to-[#079455d9] text-white">
+      <div class="m-3">
+        <h4 class="py-2 text-[12px] font-bold">About Us</h4>
+        <div class="flex flex-row md:flex-col gap-5">
+          <div class="flex flex-col gap-3">
+            <img src="./assets/logo-smartnetindo.png" class="h-[50px] w-[400px] md:w-[300px]" alt="logo" />
+            <img src="./assets/logo-smartnettc.png" class="h-[50px] w-[400px] md:w-[300px]" alt="logo" />
+          </div>
+          <div class="flex flex-col gap-3">
+            <h5 class="text-[14px]">PT. SMARTNETINDO MULTI SOLUSI</h5>
+            <p class="text-[12px] lg:text-[14px] font-light">Office : Jl. Aquamarin 2.4 No. 41 Kota Baru Driyorejo Gresik 61177 East Java - Indonesia</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="flex flex-col">
+        <div class="m-3">
+          <h4 class="py-2 text-[12px] font-bold">Page</h4>
+          <div class="flex flex-row mx-4 justify-between text-[12px] lg:text-[14px] gap-10">
+            <ul class="footer-page">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Vision & Mission</a></li>
+              <li><a href="#">Principles</a></li>
+              <li><a href="#">IT Certified Engineer</a></li>
+              <li><a href="#">ICT Solutions</a></li>
+            </ul>
+            <ul class="footer-page">
+              <li><a href="#">Our Service</a></li>
+              <li><a href="#">World Class partners</a></li>
+              <li><a href="#">Costumers Reference</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:justify-between">
+          <div class="m-3">
+            <h4 class="py-2 text-[12px] font-bold">Contact us</h4>
+            <div class="flex flex-col gap-1 text-[10px] md:text-[12px]">
+              <p class="flex items-center gap-1">
+                <i class="bx bxs-envelope text-[20px]"></i>
+                <span>info@smartnetindo.com / sales@smartnetindo.com</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <ion-icon name="call" class="text-[20px]"></ion-icon>
+                <span>+62 822 3164 6719 / +62 811 3693 989</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <ion-icon name="logo-whatsapp" class="text-[20px]"></ion-icon>
+                <span>+62 822 3164 6719 / +62 811 3693 989</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="bx bxl-telegram text-[20px]"></i>
+                <span>+62 822 3164 6719 / +62 811 3693 989</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="m-3 md:hidden">
+            <h4 class="py-2 text-[12px] font-bold">Visitor</h4>
+            <img src="./assets/visitor.png" class="h-[150px]" alt="visitor" />
+          </div>
+        </div>
+      </div>
+
+      <div class="m-3 hidden md:block">
+        <h4 class="py-2 text-[12px] font-bold">Visitor</h4>
+        <img src="./assets/visitor.png" class="h-[150px]" alt="visitor" />
+      </div>
+    </div>
+    <div>
+      <p class="text-center text-[8px] sm:text-[10px] md:text-[12px] bg-white p-2">©2013 PT. SMARTNETINDO MULTI SOLUSI | All Rights Reserved</p>
+    </div>
+    <!-- end FOOTER -->
+  </body>
+
+  <script src="./script.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    $(".owl-carousel").owlCarousel({
+      items: 1,
+      loop: true,
+      navText: ['<img src="./assets/slide/prev.png" alt="prev"/>', '<img src="./assets/slide/next.png" alt="next"/>'],
+      autoplay: false,
+      autoplayTimeout: 3000,
+      margin: 10,
+      nav: true,
+      dots: false,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false,
+          dots: false,
+        },
+        640: {
+          items: 2,
+          nav: true,
+          dots: false,
+        },
+        1024: {
+          items: 3,
+          nav: true,
+          dots: false,
+        },
+      },
+    });
+  </script>
 </html>
